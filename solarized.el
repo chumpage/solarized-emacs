@@ -299,6 +299,9 @@ customize the resulting theme."
                                             :weight normal))))
      
 
+     ;; comint
+     `(comint-highlight-prompt ((,class (:foreground ,blue))))
+
      ;; compilation
      `(compilation-column-face ((,class (:foreground ,cyan :underline nil))))
      `(compilation-column-number ((,class (:inherit font-lock-doc-face :foreground ,cyan
@@ -426,7 +429,7 @@ customize the resulting theme."
                                 :box (:line-width 1 :color ,s-mode-line-bg
                                                   :style unspecified)
                                 ))))
-     `(mode-line-buffer-id ((,class (:foreground ,s-mode-line-buffer-id-fg :weight bold))))
+     `(mode-line-buffer-id ((,class (:foreground ,s-mode-line-buffer-id-fg))))
      `(mode-line-inactive
        ((,class (:inverse-video unspecified
                                 :overline ,s-mode-line-inactive-bc
@@ -472,6 +475,10 @@ customize the resulting theme."
 
      `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
 
+     ;; widgets
+     `(widget-field ((,class (:foreground ,solarized-fg :box (:line-width 1 :color ,solarized-fg)))))
+     `(widget-single-line-field ((,class (:inherit widget-field))))
+
      ;;; external
 
      ;; ace-jump-mode
@@ -512,6 +519,12 @@ customize the resulting theme."
                                                    :slant italic))))
      `(font-latex-warning-face ((,class (:inherit bold :foreground ,orange))))
 
+
+     ;; ack
+     `(ack-separator ((,class (:foreground ,solarized-comments))))
+     `(ack-line ((,class (:foreground ,solarized-comments))))
+     `(ack-file ((,class (:foreground ,green))))
+     `(ack-match ((,class (:foreground ,orange))))
 
      ;; auto-complete
      `(ac-candidate-face ((,class (:background ,base02 :foreground ,cyan))))
@@ -1195,6 +1208,9 @@ customize the resulting theme."
      `(lusty-match-face ((,class (:inherit ido-first-match))))
      `(lusty-slash-face ((,class (:foreground ,cyan :weight bold))))
 
+     ;; lusty
+     `(lusty-match-face ((,class (:inherit isearch))))
+
      ;; magit
      `(magit-section-title ((,class (:foreground ,yellow :weight bold))))
      `(magit-branch ((,class (:foreground ,orange :weight bold))))
@@ -1410,9 +1426,7 @@ customize the resulting theme."
      `(org-archived ((,class (:foreground ,base01 :weight normal))))
      `(org-block ((,class (:foreground ,base01))))
      `(org-block-begin-line ((,class (:foreground ,base01 :slant italic))))
-     `(org-checkbox ((,class (:background ,base03 :foreground ,base0
-                                          :box (:line-width 1 :style released-button))
-                            )))
+     `(org-checkbox ((,class (:background ,base03 :foreground ,base0))))
      `(org-code ((,class (:foreground ,base01))))
      `(org-date ((,class (:foreground ,blue :underline t))))
      `(org-done ((,class (:weight bold :foreground ,green))))
